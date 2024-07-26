@@ -1,0 +1,268 @@
+/* Imports */
+@import url(https://fonts.bunny.net/css?family=be-vietnam-pro:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|inter:200,300,400,500,600,700,800,900);
+
+/* Root */
+:root {
+    /* font-families */
+    --ff-sans-header: 'Be Vietnam Pro', sans-serif;
+    --ff-sans-body: 'Inter', sans-serif;
+    /* Colors */
+    --clr-light-red: 0 100% 60%;
+    --clr-red: 0 90% 41%;
+    --clr-dark-red: 0 90% 35%;
+    --clr-white: 0 0% 100%;
+    --clr-black: 230 35% 5%;
+    --clr-primary-black: 225 25% 11%
+}
+
+/* CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin/padding and inherit fonts */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Bold Strong */
+strong {
+    font-weight: 800;
+}
+
+html {
+    hanging-punctuation: first last;
+    color-scheme: only dark;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: hsl(var(--clr-primary-black));
+}
+
+/* Remove list styles on ul, ol */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove Default link behavior */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* increase responsiveness for images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Auto balance heading text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/* keeps text/line length at a digestible size */
+p,
+li {
+    max-width: 90ch;
+    text-wrap: pretty;
+    /* stops text orphans, doesn't work on firefox */
+}
+
+/* If the user has no preference on motion, smooth scroll to anchors */
+@media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+    }
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* CSS RESET END */
+
+
+/* ===== Scrollbar CSS ===== */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--clr-red)) #000000;
+}
+
+/* Change the  scrollbar sitewide */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0 0 0 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--clr-red));
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--clr-red));
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--ff-sans-body);
+}
+
+h4,
+h3,
+h2,
+h1 {
+    font-family: var(--ff-sans-header);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-block: .75rem;
+}
+
+h1 {
+    font-size: 2.35rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-family: var(--ff-sans-body);
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: var(--ff-sans-body);
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-family: var(--ff-sans-body);
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: var(--ff-sans-body);
+}
+
+ul {
+    font-size: 1.2rem;
+    font-family: var(--ff-sans-body);
+}
+
+button {
+    cursor: pointer;
+}
+
+.hero-text {
+    text-shadow: 2px 2px 2px #000;
+}
+
+/* Links */
+
+a {
+    opacity: .5;
+    transition: opacity .2s linear;
+
+}
+
+a:hover {
+    opacity: 1;
+}
+
+/* Sections */
+
+#index-page {
+    background-image: url(images/index-background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.hero-section {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.option-buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.button-container a {
+    opacity: 1;
+    font-size: 2rem;
+    padding-inline: 2rem;
+    padding-block: .75rem;
+    border-radius: 1rem;
+    margin-block: 1rem;
+    transition: transform .3s, background-color .3s;
+    background-color: hsl(var(--clr-red));
+}
+
+.button-container a:hover {
+    transform: translateY(-.25rem);
+    background-color: hsl(var(--clr-dark-red));
+}
+
+.button-container p {
+    font-size: 1rem;
+}
+
+hr {
+    border-top: .15rem solid hsl(var(--clr-white));
+    margin-block: .25rem;
+}
