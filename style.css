@@ -12,7 +12,8 @@
     --clr-dark-red: 0 90% 35%;
     --clr-white: 0 0% 100%;
     --clr-black: 230 35% 5%;
-    --clr-primary-black: 225 25% 11%
+    --clr-primary-black: 225 25% 11%;
+    --clr-secondary-black: 225 20% 15%;
 }
 
 /* CSS Reset */
@@ -84,7 +85,7 @@ h6 {
 /* keeps text/line length at a digestible size */
 p,
 li {
-    max-width: 90ch;
+    max-width: 100ch;
     text-wrap: pretty;
     /* stops text orphans, doesn't work on firefox */
 }
@@ -211,20 +212,55 @@ a:hover {
     opacity: 1;
 }
 
-/* Sections */
-
-#index-page {
-    background-image: url(images/index-background.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Lists */
+.outer-list {
+    margin-left: 1rem;
 }
 
-nav {}
+.outer-list li {
+    list-style: inside;
+}
+
+.inner-list {
+    margin-left: 2rem;
+}
+
+.inner-list li {
+    list-style: circle;
+}
+
+/* Navigation */
+
+nav:not(.index-nav) {
+    background-color: hsl(var(--clr-secondary-black));
+}
 
 nav ul {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
+    list-style: none;
+}
+
+/* Sections */
+
+.guide-instructions {
+    width: calc(100vw - 300px);
+    margin: auto;
+}
+
+.guide-instructions ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Index/Hero page */
+
+#index-page {
+    background-image: url(images/index-background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-section {
