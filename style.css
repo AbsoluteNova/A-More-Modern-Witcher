@@ -1,5 +1,6 @@
 /* Imports */
 @import url(https://fonts.bunny.net/css?family=be-vietnam-pro:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|inter:200,300,400,500,600,700,800,900);
+@import url(https://fonts.bunny.net/css?family=fira-code:400,500);
 
 /* Root */
 :root {
@@ -14,6 +15,7 @@
     --clr-black: 230 35% 5%;
     --clr-primary-black: 225 25% 11%;
     --clr-secondary-black: 225 20% 15%;
+    --clr-third-black: 225 15% 20%;
 }
 
 /* CSS Reset */
@@ -205,8 +207,11 @@ button {
 }
 
 code {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: hsl(var(--clr-secondary-black));
+    font-family: 'Fira Code', monospace;
+    background-color: hsl(var(--clr-third-black));
+    padding-block: .25rem;
+    padding-inline: .5rem;
+    border-radius: 5px;
 }
 
 .hero-text {
@@ -233,7 +238,9 @@ a:hover {
     background-color: hsl(var(--clr-secondary-black));
     width: 100%;
     margin: auto;
-    padding: 2rem;
+    margin-block: 1rem;
+    padding-block: 1rem;
+    padding-inline: 3rem;
     border-radius: 15px;
 }
 
