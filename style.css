@@ -329,3 +329,9 @@ hr {
     margin-bottom: 1rem;
     width: 100%;
 }
+
+/* Images */
+
+.reshade-images {
+    width: 65%;
+}
