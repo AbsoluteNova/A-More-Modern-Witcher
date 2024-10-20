@@ -265,6 +265,33 @@ nav ul {
     list-style: none;
 }
 
+/* Footer */
+footer {
+    background-color: hsl(var(--clr-secondary-black));
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin: auto;
+    width: 100%;
+    margin-top: 5rem;
+    /* Stick to bottom */
+    bottom: 0;
+}
+
+footer section {
+    width: fit-content;
+}
+
+footer h2 {
+    font-size: 1.25rem;
+}
+
+footer ul {
+    list-style: none;
+}
+
 /* Sections */
 
 .guide-instructions {
@@ -325,13 +352,14 @@ nav ul {
 hr {
     border-top: .25rem solid hsl(var(--clr-white));
     margin: auto;
-    margin-block: .25rem;
-    margin-bottom: 1rem;
+    margin-block: .5rem;
     width: 100%;
 }
 
 /* Images */
 
 .reshade-images {
-    width: 65%;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
 }
