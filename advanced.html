@@ -23,20 +23,148 @@
         </header>
         <section aria-label="Wabbajack Installation" class="guide-instructions">
             <h1>Mod Organizer 2</h1>
-            <p>Wabbajack is an automated installer for the mods and MO2. This install allows for minimal user
-                intervention, basically, you don't have to do as much work.</p>
+            <p>Mod Organizer 2 (MO2) is an open source mod manager, if you've ever modded Bethesda games you'll
+                recognize it. MO2 doesn't install mods directly into the games folder but instead creates a safer
+                environment that the game reads from.</p>
+            <p>Benefits include:</p>
+            <ul>
+                <li>Safe mod installation uninstallation</li>
+                <li>Being able to modify mod install order at any point</li>
+                <li>Multiple mod profiles</li>
+                <li>Non destructive mod management keeps the game files clean</li>
+            </ul>
             <h2>Installation</h2>
             <hr>
             <ol class="outer-list">
-                <li>Download the Lastest <a class="red-link" href="https://www.wabbajack.org/">Wabbajack</a></li>
+                <li>Download the latest <a target="_blank" class="red-link"
+                        href="https://github.com/ModOrganizer2/modorganizer/releases/tag/v2.5.2">Mod Organizer 2</a>
+                </li>
+                <img class="reshade-images" src="images/MO2-github-download.webp"
+                    alt="Mod Organizer 2 Download on Github">
+                <li>Once the download has finished, run the installer</li>
+                <li>Accept the license, click <strong>Next</strong></li>
+                <li> When asked about the install location, use the default or select what best suits you, I do as
+                    follows.</li>
+                <img class="reshade-images" src="images/MO2-install-location.webp"
+                    alt="Mod Organizer 2 Install Location">
+                <li>Click next</li>
+                <li>Select "Recommended Install"</li>
+                <img class="reshade-images" src="" alt="INSERT IMAGE HERE">
+                <li>Click next</li>
+                <li>When asked to select menu folder, keep the default or set your preferred name</li>
+                <img class="reshade-images" src="" alt="INSERT IMAGE HERE">
+                <li>Click next</li>
+                <li>Decide whether you want a desktop shortcut or not</li>
+                <img class="reshade-images" src="" alt="INSERT IMAGE HERE">
+                <li>Click Next</li>
+                <li>Click Install</li>
+                <img class="reshade-images" src="" alt="INSERT IMAGE HERE">
+                <li>Once the install is complete, ensure that <strong>Launch Mod Organizer</strong> is ticked and click
+                    <strong>Finish</strong>
+                </li>
             </ol>
         </section>
         <section aria-label="Running The Game" class="guide-instructions">
-            <h2>Running The Game</h2>
-            <p>This mod guide uses the MO2 mod manager to streamline the installation process for installing mods and to
-                make your life easier for launching the game and disabling anything you don't want.</p>
+            <h2>Configuring Mod Organizer</h2>
+            <hr>
+            <ol class="outer-list">
+                <li>Click next</li>
+                <li>Select "Create a portable instance"</li>
+                <li>Select "The Witcher Enhanced Edition"</li>
+                <li>Use the defaults, keep automatic archive invalidation checked</li>
+                <li>Click next</li>
+                <li>Default Location should look the same as MO2's installation if you selected a portable instance</li>
+                <li>Click next</li>
+                <li>Click finish</li>
+                <li>Choose whether you'd like to see the tutorial</li>
+                <li>Close the wiki popup</li>
+                <li>Select Import Nexus Categories</li>
+            </ol>
         </section>
-
+        <section class="guide-instructions">
+            <h2>Nexus Mods</h2>
+            <hr>
+            <ol class="outer-list">
+                <h3>Nexus Mods MO2 Integration</h3>
+                <hr>
+                <li>You should be asked to set up Nexus mod integration, "nxm links", select <strong>Yes</strong></li>
+                <img src="images/" alt="INSERT IMAGE HERE">
+                <li>Sign in, if necessary, and authorize MO2 integration with Nexus Mods</li>
+            </ol>
+        </section>
+        <section class="guide-instructions">
+            <ol class="outer-list">
+                <h3>Installing Witcher Mods in MO2</h3>
+                <hr>
+                <h4>Understanding Nexus</h4>
+                <p>When linked to a mod, select the "<strong>Files</strong>" tab.</p>
+                <img src="" alt="INSERT IMAGE HERE">
+                <p>
+                    When the guide says to install a mod, it will be formatted as "<strong>Main File - Example
+                        1.5</strong>", this is
+                    referring to the mod's category on Nexus and the file name.
+                    Unless otherwise Specific
+                </p>
+                <img src="" alt="INSERT IMAGE HERE">
+                <h4>Mod Installation Procedure</h4>
+                <li>Download the indicated file(s)</li>
+                <li>Open the Downloads tab in MO2</li>
+                <li>Double-click on the mod to install it</li>
+                <li>Most Witcher mods will need some extra work to be formatted</li>
+                <li>Most Mods should <strong>ALWAYS</strong> have this structure in order to make sure other mods files
+                    are being properly overwritten and so that multiple of the same file are not loading at the same
+                    time. Raw mod files refer to the actual texture/script files themselves.
+                    data > Override > “raw” mod files</li>
+            </ol>
+        </section>
+        <section class="guide-instructions">
+            <ol class="outer-list">
+                <h3>Example Mod Installation</h3>
+                <hr>
+                <li>Enter the mod manager downloads tab</li>
+                <img src="" alt="INSERT IMAGE HERE">
+                <li>Double-click the mod inside the downloads panel, this will start the installation process and tell
+                    you the mod is not formatted in the expected way</li>
+                <img src="" alt="INSERT IMAGE HERE">
+                <li>In this case we only want The Witcher Texture overhaul, an easy way to eliminate all other options
+                    is to right click “The Witcher Texture Overhaul” and select “Set as &lt;data directory&gt;”</li>
+                <img src="" alt="INSERT IMAGE HERE">
+                <li>This will leave all the loose files inside the data directory, however, we need them inside an
+                    Override folder. Right click &lt;data&gt; and select “Create directory…”, name it Override</li>
+                <img src="" alt="INSERT IMAGE HERE">
+                <li>Move all the loose texture files inside the Override folder, an easy way to do this is to select the
+                    top file, scroll to the bottom Shift + Click the bottom file and this will select all files, move
+                    them to Override. Your final data structure should look like this.
+                </li>
+                <img src="" alt="INSERT IMAGE HERE">
+                <li>Click OK</li>
+            </ol>
+        </section>
+        <section class="guide-instructions">
+            <h2>Mod List</h2>
+            <hr>
+            <p>Here begins the actual mod list, good luck.</p>
+            <ol class="outer-list">
+                <a target="_blank" class="red-link"
+                    href="https://www.moddb.com/mods/scabbard-mod/downloads/scabbard-mod-v104">
+                    <h3>Scabbard Mod</h3>
+                </a>
+                <li>Click the big red "Download Now" button</li>
+                <li>This mod is packaged in an exe file, so we need to handle it differently than we would with a
+                    typical loose file mod.</li>
+                <li>Create a file called "scabbards mod" somewhere easy to find, like your desktop.</li>
+                <li>Execute the file, when it asks for your witcher game location point it to the <strong>folder you
+                        just made instead</strong>.</li>
+                <li>Select "The Witcher EE" when it presents you with a dropdown.</li>
+                <li>Finish the download and you should be presented with this in your scabbards mod folder</li>
+                <img src="images/" alt="">
+                <li>Right click Data, Select send to and then "Compressed (zipped) folder"</li>
+                <li>Name it "Scabbards mod"</li>
+                <li>Install "Scabbards mod.zip" into MO2</li>
+                <li>Right click DATA and select "set as <data> directory", you should be given the following.</li>
+                <li>Click OK</li>
+            </ol>
+        </section>
         </section>
         <footer>
             <section>
