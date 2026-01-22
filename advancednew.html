@@ -1,768 +1,1041 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Advanced Installation - A More Modern Witcher</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Installation - A More Modern Witcher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li> <a href="index.html">
-                            A More Modern Witcher
-                        </a></li>
-                    <li> <a target="_blank" href="https://ko-fi.com/absolutenova">
-                            Donate
-                        </a></li>
-                </ul>
-            </nav>
-        </header>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html"> A More Modern Witcher </a></li>
+          <li>
+            <a target="_blank" href="https://ko-fi.com/absolutenova">
+              Donate
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <main class="bounding-box">
-            <h1>Advanced Installation</h1>
+    <main class="bounding-box">
+      <h1>Advanced Installation</h1>
+      <p>
+        This page walks you through installing everything manually. It uses Mod
+        Organizer 2 and covers all required mods step by step. If you want the
+        automated version, use the
+        <a href="wabbajack.html" class="red-link">Wabbajack</a> install instead.
+        <br />
+        <strong>This version of the guide assumes that you have relatively strong
+          computer and troubleshooting skills.</strong>
+      </p>
+      <section aria-label="Prerequisites">
+        <h2>Prerequisites</h2>
+        <p>
+          While not all of these are necessarily required, I highly recommend
+          that you install Visual C++ Runtime Libraries and update your graphics
+          drivers, especially if you haven't in a while or haven't ever. <strong>A Nexus Mods account is a hard
+            requirement.</strong>
+        </p>
+        <hr />
+        <div class="outer-bubble">
+          <article>
+            <h3>A Good Archiving Tool</h3>
             <p>
-                This page walks you through installing everything manually. It uses
-                Mod Organizer 2 and covers all required mods step by step. If you want
-                the automated version, use the <a href="wabbajack.html" class="red-link">Wabbajack</a> install instead.
-                <br>
-                <strong>This version of the guide assumes that you have relatively strong computer and troubleshooting
-                    skills.</strong>
+              This is a tool for extracting and manipulating .zip, .rar, .7z and
+              other compressed files.
             </p>
-            <section aria-label="Prerequisites">
-                <h2>Prerequisites</h2>
-                <p>While not all of these are necessarily required, I highly recommend that you install Visual C++
-                    Runtime
-                    Libraries and update your graphics drivers, especially if you haven't in a while or haven't
-                    ever.</p>
-                <hr>
-                <div class="outer-bubble">
-                    <article>
-                        <h3>A Good Archiving Tool</h3>
-                        <p>This is a tool for extracting and manipulating .zip, .rar, .7z and other compressed files.
-                        </p>
-                        <ul class="inner-bubble">
-                            <li>I recommend <a target="_blank" class="red-link"
-                                    href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US">NanaZip</a> for
-                                <strong>Windows
-                                    11</strong> users.
-                            </li>
-                            <li>I recommend <a target="_blank" class="red-link" href="https://www.7-zip.org/">7-Zip</a>
-                                for
-                                <strong>Windows
-                                    10</strong>
-                                users.
-                            </li>
-                        </ul>
-                    </article>
-                    <article>
-                        <h3><a target="_blank" class="red-link"
-                                href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/">Visual
-                                C++ Runtime Libraries</a></h3>
-                        <p>This is a compilation of old and new C++ runtime libraries. Installing these libraries fixes
-                            some issues
-                            with running the game on modern systems. A lot of older games need these as well,
-                            so it doesn't hurt to have them installed.</p>
-                        <ol class="inner-bubble">
-                            <li>Download the file from Techpowerup.</li>
-                            <li>Extract the archive using your archiving tool of choice.</li>
-                            <li>Open the folder.</li>
-                            <li>Right click install_all.bat and run as administrator.</li>
-                            <li>Work your way through each install prompt until finished.</li>
-                        </ol>
-                    </article>
-                    <article>
-                        <h3>Graphics Drivers</h3>
-                        <p>Ensure that your graphics drivers are up to date.</p>
-                        <ul class="inner-bubble">
-                            <li>Nvidia Graphics Drivers can be downloaded through the <a id="nvidia-link"
-                                    target="_blank" href="https://www.nvidia.com/en-eu/software/nvidia-app/">NVIDIA
-                                    App</a>.</li>
-                            <li>AMD Graphics Drivers can be downloaded through <a id="amd-link" target="_blank"
-                                    href="https://www.amd.com/en/products/software/adrenalin.html">AMD Adrenalin</a>.
-                            </li>
-                            <li>Intel Arc Graphics Drivers can be downloaded through <a id="intel-link" target="_blank"
-                                    href="https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html">Intel
-                                    Arc</a>.</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <h3><a target="_blank" class="red-link" href="https://www.nexusmods.com/">Nexus Mods Account</a>
-                        </h3>
-                        <p>This is a hard requirement for installing mods from Nexus. If you do not already have a nexus
-                            mods account, you will need one. You can create an account
-                            <a target="_blank" class="red-link" href="https://users.nexusmods.com/">here</a>.
-                        </p>
-                    </article>
-                </div>
-            </section>
-            <section aria-label="Mod Organizer 2 Installation">
-                <h2>Mod Organizer 2</h2>
-                <p>
-                    Mod Organizer 2 (MO2) is an open source mod manager. If you've ever modded Bethesda games
-                    you'll likely recognize it. MO2 doesn't install mods directly into the games folder but
-                    instead creates a virtualized environment that is added to the game folder at runtime.
-                </p>
+            <ul class="inner-bubble">
+              <li>
+                I recommend
+                <a target="_blank" class="red-link"
+                  href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US">NanaZip</a>
+                for <strong>Windows 11</strong> users.
+              </li>
+              <li>
+                I recommend
+                <a target="_blank" class="red-link" href="https://www.7-zip.org/">7-Zip</a>
+                for
+                <strong>Windows 10</strong>
+                users.
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>
+              <a target="_blank" class="red-link"
+                href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/">Visual
+                C++ Runtime Libraries</a>
+            </h3>
+            <p>
+              This is a compilation of old and new C++ runtime libraries.
+              Installing these libraries fixes some issues with running the game
+              on modern systems. A lot of older games need these as well, so it
+              doesn't hurt to have them installed.
+            </p>
+            <ol class="inner-bubble">
+              <li>Download the file from Techpowerup.</li>
+              <li>Extract the archive using your archiving tool of choice.</li>
+              <li>Open the folder.</li>
+              <li>Right click install_all.bat and run as administrator.</li>
+              <li>Work your way through each install prompt until finished.</li>
+            </ol>
+          </article>
+          <article>
+            <h3>Graphics Drivers</h3>
+            <p>Ensure that your graphics drivers are up to date.</p>
+            <ul class="inner-bubble">
+              <li>
+                Nvidia Graphics Drivers can be downloaded through the
+                <a id="nvidia-link" target="_blank" href="https://www.nvidia.com/en-eu/software/nvidia-app/">NVIDIA
+                  App</a>.
+              </li>
+              <li>
+                AMD Graphics Drivers can be downloaded through
+                <a id="amd-link" target="_blank" href="https://www.amd.com/en/products/software/adrenalin.html">AMD
+                  Adrenalin</a>.
+              </li>
+              <li>
+                Intel Arc Graphics Drivers can be downloaded through
+                <a id="intel-link" target="_blank"
+                  href="https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html">Intel
+                  Arc</a>.
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>
+              <a target="_blank" class="red-link" href="https://www.nexusmods.com/">Nexus Mods Account</a>
+            </h3>
+            <div class="inner-bubble">
+              <p>
+                <strong>This is a hard requirement</strong> for installing mods from Nexus. If you
+                do not already have a nexus mods account, you will need one. You
+                can create an account
+                <a target="_blank" class="red-link" href="https://users.nexusmods.com/">here</a>.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section aria-label="Mod Organizer 2 Installation">
+        <h2>Mod Organizer 2</h2>
+        <p>
+          Mod Organizer 2 (MO2) is an open source mod manager. If you've ever
+          modded Bethesda games you'll likely recognize it. MO2 doesn't install
+          mods directly into the games folder but instead creates a virtualized
+          environment that is added to the game folder at runtime.
+        </p>
+        <br />
+        <p>Benefits include:</p>
+        <ul>
+          <li>Safe mod installation and uninstallation</li>
+          <li>The ability to modify mod priorities and overwrites at any time</li>
+          <li>Multiple mod profiles</li>
+          <li>Non destructive mod management keeps the game install clean</li>
+        </ul>
+        <hr />
+        <div class="outer-bubble">
+          <article>
+            <h3>Installing Mod Organizer 2</h3>
+            <ol class="inner-bubble">
+              <li>
+                Download the latest
+                <a target="_blank" class="red-link"
+                  href="https://github.com/ModOrganizer2/modorganizer/releases/tag/v2.5.2">
+                  Mod Organizer 2 </a>.
+                <img class="reshade-images" src="images/MO2-github-download.webp"
+                  alt="Mod Organizer 2 download page on GitHub">
+              </li>
+              <li>Once the download has finished, run the installer.</li>
+              <li>Accept the license and click <strong>Next</strong>.</li>
+              <li>
+                When asked about the install location, use the default or select
+                what best suits you, I do as follows.
+                <img class="reshade-images" src="images/MO2-install-location.webp"
+                  alt="Mod Organizer 2 install location screen">
+              </li>
+              <li>
+                Click <strong>Next</strong> and select
+                <strong>Recommended Install</strong>.
+                <img class="reshade-images" src="images/MO2-recommended-install.webp"
+                  alt="Mod Organizer 2 Recommended Install option">
+              </li>
+              <li>
+                On the Start Menu folder page, keep the default name or set your
+                preferred name.
+                <img class="reshade-images" src="images/MO2-start-menu-folder.webp"
+                  alt="Mod Organizer 2 start menu folder screen">
+              </li>
+              <li>
+                Decide whether you want a desktop shortcut.
+                <img class="reshade-images" src="images/MO2-additional-tasks.webp"
+                  alt="Mod Organizer 2 additional tasks screen with desktop shortcut option">
+              </li>
+              <li>
+                Click <strong>Next</strong>, then click
+                <strong>Install</strong>.
+                <img class="reshade-images" src="images/MO2-ready-to-install.webp"
+                  alt="Mod Organizer 2 ready to install screen">
+              </li>
+              <li>
+                Once the install is complete, ensure that
+                <strong>Launch Mod Organizer</strong> is ticked, then click
+                <strong>Finish</strong>.
+              </li>
+            </ol>
+          </article>
+          <article>
+            <h3>Creating a New Instance</h3>
+            <ol class="inner-bubble">
+              <li> Click the <strong>Create new instance</strong> button if shown, otherwise continue.</li>
+              <li>
+                Click <strong>Next</strong>.
+                <img class="reshade-images" src="images/MO2-config-new-instance.webp"
+                  alt="Mod Organizer 2 window for creating a new instance">
+              </li>
+              <li>Select "Create a portable instance"
+                <img class="reshade-images" src="images/MO2-CreatePortableInstance.webp"
+                  alt="Mod Organizer 2 window for creating a portable instance">
+              </li>
+              <li>Select "The Witcher: Enhanced Edition". If it's not there by default, select browse and find your game
+                manually.
+                <img class="reshade-images" src="images/MO2-SelectWitcher.webp"
+                  alt="Mod Organizer 2 window for selecting Witcher: Enhanced Edition game director">
+              </li>
+              <li>
+                Use the defaults, keep automatic archive invalidation checked. Click next.
+                <img class="reshade-images" src="images/MO2-ConfigureProfileSettings.webp"
+                  alt="Mod Organizer 2 window for selecting profile settings">
+              </li>
+              <li>
+                Default Location should look the same as MO2's installation if
+                you selected a portable instance. Click next.
+                <img class="reshade-images" src="images/MO2-SelectingDataFolder.webp"
+                  alt=" Mod Organizer 2 window for selecting where data should be stored">
+              </li>
+              <li>Click finish.
+                <img class="reshade-images" src="images/MO2-InstanceConfirmation.webp"
+                  alt="Mod Organizer 2 confirmation window for creating a new instance">
+              </li>
+              <li>Choose whether you'd like to see the tutorial.</li>
+              <li>Close the wiki popup.</li>
+              <li>Select Import Nexus Categories.
+                <img class="reshade-images" src="images/MO2-ImportNexusCategories.webp"
+                  alt="Mod Organizer 2 window for importing Nexus categories">
+              </li>
+              <li>Your MO2 should look as follows:
+                <img class="reshade-images" src="images/MO2-DefaultScreen.webp"
+                  alt="Mod Organizer 2 default screen after installation">
+              </li>
+            </ol>
+          </article>
+          <article>
+            <h3>Nexus Mods MO2 Integration</h3>
+            <ol class="inner-bubble">
+              <li>
+                You should be asked to set up Nexus mod integration, "nxm
+                links", select
+                <strong>Yes</strong>
+              </li>
+              <li>If you haven't you can open the settings menu and go to the Nexus tab to select Connect to Nexus.
+                <img class="reshade-images" src="images/MO2-ConnectToNexus.webp" alt="INSERT IMAGE HERE" />
+              </li>
+              <li>
+                Sign in, if necessary, and authorize MO2 integration with Nexus
+                Mods
+                <img class="reshade-images" src="images/MO2-AuthorizeAccess.webp" alt="">
+              </li>
+            </ol>
+          </article>
+        </div>
+      </section>
+      <section aria-label="Installing Witcher Enhanced Edition Mods in Mod Organizer 2">
+        <h2>Installing Witcher Mods in MO2</h2>
+        <hr />
+        <div class="outer-bubble">
+          <article>
+            <h3>Understanding Nexus</h3>
+            <ol class="inner-bubble">
+              <li>
+                When linked to a mod, select the "<strong>Files</strong>" tab.
+                <img class="reshade-images" src="images/Nexus-MainPage.webp" alt="INSERT IMAGE HERE" />
+              </li>
+              <li>
+                Download the indicated file(s) using the mod manager download
+                button.
                 <br>
-                <p>Benefits include:</p>
-                <ul>
-                    <li>Safe mod installation and uninstallation</li>
-                    <li>The ability to modify mod priorities and overwrites at any time</li>
-                    <li>Multiple mod profiles</li>
-                    <li>Non destructive mod management keeps the game install clean</li>
-                </ul>
-                <hr>
-                <div class="outer-bubble">
-                    <article>
-                        <h3>Installing Mod Organizer 2</h3>
-                        <ol class="inner-bubble">
-                            <li>Download the latest
-                                <a target="_blank" class="red-link"
-                                    href="https://github.com/ModOrganizer2/modorganizer/releases/tag/v2.5.2">
-                                    Mod Organizer 2
-                                </a>.
-                                <img class="reshade-images" src="images/MO2-github-download.webp"
-                                    alt="Mod Organizer 2 download page on GitHub">
-                            </li>
-                            <li>
-                                Once the download has finished, run the installer.
-                            </li>
-                            <li>Accept the license and click <strong>Next</strong>.</li>
-                            <li>
-                                When asked about the install location, use the default or select what best suits you, I
-                                do as
-                                follows.
-                                <img class="reshade-images" src="images/MO2-install-location.webp"
-                                    alt="Mod Organizer 2 install location screen">
-                            </li>
-                            <li>
-                                Click <strong>Next</strong> and select <strong>Recommended Install</strong>.
-                                <img class="reshade-images" src="images/MO2-recommended-install.webp"
-                                    alt="Mod Organizer 2 Recommended Install option">
-                            </li>
-                            <li>
-                                On the Start Menu folder page, keep the default name or set your preferred name.
-                                <img class="reshade-images" src="images/MO2-start-menu-folder.webp"
-                                    alt="Mod Organizer 2 start menu folder screen">
-                            </li>
-                            <li>
-                                Decide whether you want a desktop shortcut.
-                                <img class="reshade-images" src="images/MO2-additional-tasks.webp"
-                                    alt="Mod Organizer 2 additional tasks screen with desktop shortcut option">
-                            </li>
-                            <li>
-                                Click <strong>Next</strong>, then click <strong>Install</strong>.
-                                <img class="reshade-images" src="images/MO2-ready-to-install.webp"
-                                    alt="Mod Organizer 2 ready to install screen">
-                            </li>
-                            <li>
-                                Once the install is complete, ensure that <strong>Launch Mod Organizer</strong> is
-                                ticked,
-                                then click <strong>Finish</strong>.
-                        </ol>
-                    </article>
-                    <article>
-                        <h3>Creating a New Instance</h3>
-                        <ol class="inner-bubble">
-                            <li>Click next
-                                <img class="reshade-images" src="images/MO2-config-new-instance.webp"
-                                    alt="Image explaining how to create a new instance in Mod Organizer 2">
-                            </li>
-                            <li>Select "Create a portable instance"</li>
-                            <li>Select "The Witcher Enhanced Edition"</li>
-                            <li>Use the defaults, keep automatic archive invalidation checked</li>
-                            <li>Click next</li>
-                            <li>Default Location should look the same as MO2's installation if you selected a portable
-                                instance
-                            </li>
-                            <li>Click next</li>
-                            <li>Click finish</li>
-                            <li>Choose whether you'd like to see the tutorial</li>
-                            <li>Close the wiki popup</li>
-                            <li>Select Import Nexus Categories</li>
-                        </ol>
-                    </article>
-                    <article>
-                        <h3>Nexus Mods MO2 Integration</h3>
-                        <ol class="inner-bubble">
-                            <li>You should be asked to set up Nexus mod integration, "nxm links", select
-                                <strong>Yes</strong>
-                                <img src="images/" alt="INSERT IMAGE HERE">
-                            </li>
-                            <li>Sign in, if necessary, and authorize MO2 integration with Nexus Mods</li>
-                        </ol>
-                    </article>
+                When the guide says to install a mod, it will be formatted as
+                "<strong>Main File - Example</strong>", this is referring
+                to the mod's category on Nexus and the file name, unless
+                otherwise specified.
+                <br>
+                <strong>Note:</strong> Some files may only have a manual download option and you
+                will need to import the archive into MO2 manually.
+                <img class="reshade-images" src="images/Nexus-FilesPage.webp" alt="">
+              </li>
+            </ol>
+          </article>
+          <article>
+            <h3>Example Mod Installation</h3>
+            <p> Unlike when modding Bethesda games, most Witcher mods will need some extra work to be formatted in a way
+              that MO2 agrees with.
+            </p>
+            <br>
+            <p>
+              Most mods should <strong>ALWAYS</strong> have the following structure in
+              order to make sure other mods files are being properly
+              overwritten and so that multiple of the same file are not
+              loading at the same time. Raw mod files refer to the actual
+              texture/script files themselves.
+              <br>
+              data > Override > “raw” mod files.
+            </p>
+            <ol class="inner-bubble">
+              <li>
+                Enter the mod manager downloads tab
+                <img class="reshade-images" src="images/MO2-DownloadsTab.webp" alt="INSERT IMAGE HERE" />
+              </li>
+              <li>
+                Double-click the mod inside the downloads panel, this will start
+                the installation process and tell you the mod is not formatted
+                in the expected way
+                <img class="reshade-images" src="images/MO2-ModDownloaded.webp" alt="INSERT IMAGE HERE" />
+              </li>
+              <li>
+                In this case we only want The Witcher Texture overhaul, an easy
+                way to eliminate all other options is to right click “The
+                Witcher Texture Overhaul” and select “Set as &lt;data
+                directory&gt;”
+                <img class="reshade-images" src="images/MO2-InstallWitcherOverhaulProject.webp"
+                  alt="INSERT IMAGE HERE" />
+              </li>
+              <li>
+                This will leave all the loose files inside the data directory,
+                however, we need them inside an Override folder. Right click
+                &lt;data&gt; and select “Create directory…”, name it Override
+                <div class="scroll-images">
+                  <img class="reshade-images" src="images/MO2-WitcherOverhaulSetData.webp" alt="INSERT IMAGE HERE" />
+                  <img class="reshade-images" src="images/MO2-CreateDirectory.webp" alt="INSERT IMAGE HERE" />
+                  <img class="reshade-images" src="images/MO2-DirectoryCreated.webp" alt="INSERT IMAGE HERE" />
+
                 </div>
-            </section>
-            <section aria-label="Installing Witcher Enhanced Edition Mods in Mod Organizer 2">
-                <h2>Installing Witcher Mods in MO2</h2>
-                <p></p>
-                <hr>
-                <div class="outer-bubble">
-                    <article>
-                        <h3>Understanding Nexus</h3>
-                        <ol class="inner-bubble">
-                            <li>When linked to a mod, select the "<strong>Files</strong>" tab.
-                                <p>
-                                    When the guide says to install a mod, it will be formatted as "<strong>Main File -
-                                        Example
-                                        1.5</strong>", this is
-                                    referring to the mod's category on Nexus and the file name, unless otherwise
-                                    specified.
-                                </p>
-                                <img src="placeholder.jpg" alt="INSERT IMAGE HERE">
-                            </li>
-                            <li>Download the indicated file(s) using the mod manager download button. <br> Note: Some
-                                files may only have a manual download option and you will need to import the archive
-                                manually.</li>
-                            <li>Open the Downloads tab in MO2</li>
-                            <li>Double-click on the mod to install it</li>
-                            <li>Most Witcher mods will need some extra work to be formatted</li>
-                            <li>Most Mods should <strong>ALWAYS</strong> have this structure in order to make sure other
-                                mods files are being properly overwritten and so that multiple of the same file are not
-                                loading at the same time. Raw mod files refer to the actual texture/script files
-                                themselves. data > Override > “raw” mod files</li>
-                        </ol>
-                    </article>
-                    <article>
-                        <h3>Example Mod Installation</h3>
-                        <ol class="inner-bubble">
-                            <li>Enter the mod manager downloads tab
-                                <img src="placeholder.jpg" alt="INSERT IMAGE HERE">
-                            </li>
-                            <li>Double-click the mod inside the downloads panel, this will start the installation
-                                process and
-                                tell
-                                you the mod is not formatted in the expected way
-                                <img src="placeholder.jpg" alt="INSERT IMAGE HERE">
-                            </li>
-                            <li>In this case we only want The Witcher Texture overhaul, an easy way to eliminate all
-                                other
-                                options
-                                is to right click “The Witcher Texture Overhaul” and select “Set as &lt;data
-                                directory&gt;”
-                                <img src="placeholder.jpg" alt="INSERT IMAGE HERE">
-                            </li>
-                            <li>This will leave all the loose files inside the data directory, however, we need them
-                                inside an
-                                Override folder. Right click &lt;data&gt; and select “Create directory…”, name it
-                                Override
-                                <img src="placeholder.jpg" alt="INSERT IMAGE HERE">
-                            </li>
-                            <li>Move all the loose texture files inside the Override folder, an easy way to do this
-                                is
-                                to select
-                                the
-                                top file, scroll to the bottom Shift + Click the bottom file and this will select
-                                all
-                                files,
-                                move
-                                them to Override. Your final data structure should look like this.
-                                <img src="placeholder.jpg" alt="INSERT IMAGE HERE">
-                            </li>
-                            <li>Click OK</li>
-                        </ol>
-                    </article>
-                </div>
-            </section>
-            <section aria-labelledby="graphical-improvements">
-                <h2 id="graphical-improvements">Graphical Improvements</h2>
-                <hr>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/703">
-                        <h3>The Witcher Overhaul Project</h3>
-                    </a>
-                    <p>Replaces a large amount of vanilla textures with HD textures.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Sound and Texture Overhaul</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/662">
-                        <h3>Realistic Moon HD</h3>
-                    </a>
-                    <p>Replaces the moon with a higher resolution and more realistic texture.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - The Witcher - Realistic Moon HD</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/813">
-                        <h3>Rain Fog Remover</h3>
-                    </a>
-                    <p>Replaces radioactive looking fog that occurs when raining with a transparent texture, makes rain
-                        look normal.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Rain fog remover</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/892">
-                        <h3>Kaer Morhen Witcher 3 HD Retexture Remaster (with unique textures)</h3>
-                    </a>
-                    <p>HD Retexture of Kaer Morhen.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Kaer Morhen W3 Style HD Retexture</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/999">
-                        <h3>No More Radioactive Wheat - Natural Grain Texture</h3>
-                    </a>
-                    <p>Changes the wheat texture to be less of a bright yellow/green texture.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Main File</li>
-                        <li>Optional Files - OPTIONAL DARK SOIL TEXTURE FOR A MORE CONSISTENT LOOK</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/901">
-                        <h3>Improved HD Lightsources</h3>
-                    </a>
-                    <p>Higher res textures for light sources</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - HD Light Sources</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/900">
-                        <h3>Distinctive Raven's Armors</h3>
-                    </a>
-                    <p>Makes the Raven Armors more distinctive between their variants and upscales their textures.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Distinctive Raven Armors No Headband</li>
-                        <li>Optional Files - Alternate Order and Elven Raven Armor</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1056">
-                        <h3>The Witcher Perfect Blood Upscaled and Retouched</h3>
-                    </a>
-                    <p> This mod improves the textures of blood and tweaks the effect settings</p>
-                    <p><strong>Note: I've uploaded this mod to Nexus but I do not take any ownership of it, I updated
-                            the config file and upscaled the textures.</strong></p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Perfect Blood Upscaled And Retouched</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/897">
-                        <h3>School of the wolf</h3>
-                    </a>
-                    <p>Differentiates all witchers in the game and reworks Eskel and Lambert's faces to more closely
-                        resemble their Witcher 3 counterparts.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - School of the Wolf</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1016">
-                        <h3>Natural Shani HD Upscaled</h3>
-                    </a>
-                    <p>Upscaled version of Natural Shani. Provides a more practical look for Shani.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Natural Shani HD Upscaled</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/852">
-                        <h3>Hiuuz’s Witcher 3 Shani for The Witcher</h3>
-                    </a>
-                    <p>Makes Shani's face look more like her Witcher 3 counterpart.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Shani_w3Face</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/847">
-                        <h3>Thaler HD Retexture</h3>
-                    </a>
-                    <p>High quality retexture for Thaler.</p>
-                    <ul class="inner-bubble">
-                        <li>Thaler HD Retexture</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/849">
-                        <h3>Kalkstein HD Retexture</h3>
-                    </a>
-                    <p>High quality retexture for Kalkstein.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Kalkstein HD Retexture</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/850">
-                        <h3>Ramsmeat HD Retexture</h3>
-                    </a>
-                    <p>High quality retexture for Ramsmeat.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Ramsmeat HD Retexture</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1028">
-                        <h3>Coleman HD Retexture</h3>
-                    </a>
-                    <p>High quality retexture for Coleman.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Coleman HD Retexture</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1027">
-                        <h3>Guards HD Retexture</h3>
-                    </a>
-                    <p>High quality retexture for Guards.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Guards HD Retexture</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/872">
-                        <h3>Zoltan Inspired by the Witcher 2</h3>
-                    </a>
-                    <p>Retextures Zoltan to look more like his Witcher 2 counterpart.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - TW2 Style Zoltan</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/878">
-                        <h3>Foltest Inspired by the Witcher 2</h3>
-                    </a>
-                    <p>Retextures Foltest to look more like his Witcher 2 counterpart.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Foltest inspired by The Witcher 2</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/899">
-                        <h3>NPC Eye Fixes and Overhaarticle</h3>
-                    </a>
-                    <p>Adds realistic HD eyes of various colors for several NPCs game-wide and fixes some quest & lore
-                        inconsistencies with eye color.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - TW1 NPC Eye Overhaarticle</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1036">
-                        <h3>Lore Triss with Sodden Scars</h3>
-                    </a>
-                    <p>Lore image of Triss from the book description, including blue eyes and scars.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Lore Triss with Sodden Scars</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/831">
-                        <h3>Triss inspired from The Witcher 2</h3>
-                    </a>
-                    <p>Retextures Triss's outfit to look more like her Witcher 2 counterpart.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Triss TW2 outfit with original skin tone face and hair</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1011">
-                        <h3>Farticlel HD Blue Eyes For Triss</h3>
-                    </a>
-                    <p>HD Upscale of Triss Blue Eyes</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - HD Blue Triss Eyes</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/860">
-                        <h3>Hiuuz's Witcher 3 Dandelion for The Witcher</h3>
-                    </a>
-                    <p>Replaces Dandelion's face to look more like his Witcher 3 counterpart</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Dandelion_w3Face</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/860">
-                        <h3>Geralt Face and Leather Jacket Retexture</h3>
-                    </a>
-                    <p>Retextures Geralt's face and leather jacket but we'll be replacing his face with a version I
-                        prefer in the next mod.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Geralt_retextured_v1p2</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/940">
-                        <h3>Striga Scar Alternatives and Tweaks for Hiuuz's Witcher 3 Geralt Face for The Witcher</h3>
-                    </a>
-                    <p>Updated version of Hiuzz's Witcher 3 Geralt face which adds the Striga scar and adds some fixes
-                        to Geralt's mods.</p>
-                    <ul class="inner-bubble">
-                        <li>Main File - Striga Scar and Arm Fix</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/845">
-                        <h3>Reverend Beard Texture Fix</h3>
-                    </a>
-                    <p>Fixes a seam issue with the Reverend's Beard and upscales his textures.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Reverend Beard Texture Fix</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/990">
-                        <h3>The Witcher HUD Compilation</h3>
-                    </a>
-                    <p><strong>THIS MOD IS ENTIRELY OPTIONAL.</strong> This is an opinionated compilation of hud and UI
-                        mods, including assets from Rise of the White Wolf, Black Edition, Inferno Edition, and the
-                        author's own tweaks. So far, this has been my favorite UI mod.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Witcher HUD Compilation - Override</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/947">
-                        <h3>Skip intro - straight to the Main Menu</h3>
-                    </a>
-                    <p>This mod forces your game to skip intro videos and goes straight to the main menu.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Movies</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/989">
-                        <h3>Movie Upscale Project (4K)</h3>
-                    </a>
-                    <p>All movies, cutscenes and cards are upscaled to a 4K resolution.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - 4K Game Movie Package</li>
-                    </ul>
-                </article>
-            </section>
-            <section aria-labelledby="bug-fixes">
-                <h2 id="bug-fixes">Bug Fixes & Tweaks</h2>
-                <hr>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/941">
-                        <h3>Project Mersey - The Witcher Fix Pack</h3>
-                    </a>
-                    <p>Fixes numerous bugs, implements leftover content that was cut, and adds some QoL
-                        improvements,
-                        such as item stacking and increased Geralt speed.</p>
-                    <p><strong>Note:</strong> Do not change anything about the file structure during installation.
-                    </p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Project Mersey - The Witcher Fix Pack</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/921">
-                        <h3>Morenn Storage and Romance Fix</h3>
-                    </a>
-                    <p>Fixes an issue with Morenn's romance dialogue and adds a storage inventory similar to
-                        innkeepers to her dialogue.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Morenn Storage and Romance Fix</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/665">
-                        <h3>TW1 All Herbs</h3>
-                    </a>
-                    <p>Increases herb spawn amounts, making the game far less tedious.</p>
-                    <p><strong>Note:</strong> Do not install with "Han Gives Han NOT Berbercane."</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - TW1 All Herbs</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/657">
-                        <h3>Missing Kalkstein and Leuvaarden Clues Fix</h3>
-                    </a>
-                    <p>Makes the missing clues for Suspect: Kalkstein and Suspect: Leuvaarden available.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Missing Kalkstein and Leuvaarden Clues Fix</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/955">
-                        <h3>Leuvaarden Buys Salamander Pins</h3>
-                    </a>
-                    <p>Allows Leuvaarden to buy your Salamandra badges. Includes a balanced version and alternate
-                        version.</p>
-                    <ul class="inner-bubble">
-                        <li>Optional Files - Alternate Version</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/964">
-                        <h3>Celina and Jarticleian Fix</h3>
-                    </a>
-                    <p>Fixes issues with a certain quest involving Celina in Chapter 4 and includes added dialogue
-                        not
-                        present in the original mod.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Celina Jarticleian Fix</li>
-                        <li>Optional Files - English Voice Files</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/737">
-                        <h3>More Talents (Balanced)</h3>
-                    </a>
-                    <p>Allows you to get more talents around level 38 without excessive grinding or completing
-                        certain
-                        tasks.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - More Talents (Balanced)</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1084">
-                        <h3>Miscellaneous Fixes</h3>
-                    </a>
-                    <p>Includes fixes to cutscenes, monster varticlenerabilities, and other tweaks.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Misc Fixes</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1092">
-                        <h3>The Order and Scoia'tael Rank Rebalance</h3>
-                    </a>
-                    <p>Rebalances and organizes level and experience values for characters from the Order and
-                        Scoia'tael.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - The Order and Scoia'tael Ranks</li>
-                        <li>Update Files - Scoia'tael part 2</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1083">
-                        <h3>Stamina Talents Fix</h3>
-                    </a>
-                    <p>Fixes issues in two stamina talents.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Endurance Talents Fix</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1083">
-                        <h3>Drowners are Necrophages...so are Devourers</h3>
-                    </a>
-                    <p>Fixes an issue with drowners and drowner dead not being affected by the Necrophage Oil.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Drowners are Necrophages...so are Devourers</li>
-                    </ul>
-                </article>
-                <article class="outer-bubble">
-                    <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1101">
-                        <h3>Sword Stats Rebalance</h3>
-                    </a>
-                    <p>Majorly rebalances sword stats and prices.</p>
-                    <p><strong>Note:</strong> This mod comes with sword fixes, thus the mod "Sword Stats Fixes" from the
-                        same author is not needed.</p>
-                    <ul class="inner-bubble">
-                        <li>Main Files - Sword Stats Rebalance</li>
-                    </ul>
-                </article>
-            </section>
-            <section>
-                <h2>Installing DXVK</h2>
-                <hr>
-                <div class="outer-bubble"></div>
-            </section>
-            <section aria-labelledby="installing-reshade">
-                <h2 id="installing-reshade">Installing Reshade</h2>
-                <hr>
-                <ol class="outer-bubble">
-                    <li>Download the latest <a target="_blank" class="red-link"
-                            href="https://reshade.me/">Reshade</a><strong> WITH FULL
-                            ADD-ON
-                            SUPPORT</strong></li>
-                    <li>Run the setup tool</li>
-                    <li>Find and select Witcher.exe inside the system folder of your game. Typically: <br>
-                        <code>"Steam\steamapps\common\The Witcher Enhanced Edition\Data\Override"</code>
-                    </li>
-                    <li>Select <strong>Vulkan</strong> as the rendering api, since we're using dxvk to convert d3d9
-                        commands to vulkan</li>
-                    <li>Checkmark the following packs
-                        <ul>
-                            <li>SweetFX by Ceejay.dk</li>
-                            <li>Legacy effects</li>
-                            <li>FXShaders by luluco250</li>
-                            <li>qUINT by Marty McFly</li>
-                            <li>Color effects by prod80</li>
-                            <li>dh-reshade-shaders by AlucardDH</li>
-                            <li>Insane-Shaders by Lord of Lunacy</li>
-                            <li>AstrayFX</li>
-                            <li>iMMERSE by Marty Mcfly</li>
-                        </ul>
-                    </li>
-                    <li>Click run inside of MO2, from now on only launch the game through MO2. Mods will only load
-                        if the game is run through MO2</li>
-                    <li>Once loaded into the game, hit "home" on your keyboard to open reshade.</li>
-                    <li>Click Skip Tutorial
-                        <img class="reshade-images" src="images/skip-tutorial.webp" alt="">
-                    </li>
-                    <li>Select the dropdown at the top, scroll down until you find WitcherReshade.ini, select the
-                        file
-                        and
-                        click Select
-                        <img class="reshade-images" src="images/select-dropdown.webp" alt="">
-                    </li>
-                    <li>Select Performance mode at the bottom of the page. This will fully compile and lock in
-                        settings,
-                        netting you more performance. If you want to change specific settings in filters you can
-                        turn it
-                        off
-                        and on at your will.
-                        <img class="reshade-images" src="images/performance-mode-off.webp" alt="">
-                        <img class="reshade-images" src="images/performance-mode-on.webp" alt="">
-                    </li>
-                    <li>Click on the add-ons tab
-                        <img class="reshade-images" src="images/add-ons-tab.webp" alt="">
-                    </li>
-                    <li>Enable "Copy depth buffer during frame to prevent artifacts", this should also enable "Copy
-                        depth
-                        buffer before clear operations". This will allow reshade to access the depth buffer and
-                        inject
-                        ambient occlusion and other effects.
-                        <img class="reshade-images" src="images/depth-buffer.webp" alt="">
-                    </li>
-                    <li>That's it! Your game should now be modded and playable as intended. You can continue to add
-                        some
-                        more overhaul mods that couldn't be included in Wabbajack or continue playing!</li>
-                </ol>
-            </section>
-        </main>
-        <footer>
-            <section>
-                <h2>More From Me</h2>
-                <ul>
-                    <li><a target="_blank" href="https://www.youtube.com/@AbsoluteNovaHD">Youtube</a>
-                    </li>
-                    <li><a target="_blank" href="https://next.nexusmods.com/profile/AbsoluteNova/mods">Nexus Mods</a>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Other Mod Projects</h2>
-                <ul>
-                    <li>Work in progress</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Support Me</h2>
-                <ul>
-                    <li><a target="_blank" href="https://ko-fi.com/absolutenova">Ko-fi</a></li>
-                </ul>
-            </section>
-        </footer>
+              </li>
+              <li>
+                Move all the loose texture files inside the Override folder, an
+                easy way to do this is to select the top file, scroll to the
+                bottom Shift + Click the bottom file and this will select all
+                files, move them to Override. Your final data structure should
+                look like this.
+                <img class="reshade-images" src="images/MO2-FinalResult.webp" alt="INSERT IMAGE HERE" />
+              </li>
+              <li>Click OK, your Mod Organizer will now look as follows. Select the checkmark to enable the mod.
+                <img class="reshade-images" src="images/MO2-InstalledMod.webp" alt="INSERT IMAGE HERE" />
+              </li>
+            </ol>
+            <br>
+            <p>You can now apply these principles to download basically every mod. If you want more specifics on how Mod
+              Organizer 2 works and other things you can do with the program, check out my <a class="red-link" href=""
+                target="_blank">MO2 Help Page</a>. I also explain in more detail how the underlying folder structure for
+              Witcher: Enhanced Edition and MO2 works here.</p>
+          </article>
+        </div>
+      </section>
+      <section aria-labelledby="graphical-improvements">
+        <h2 id="graphical-improvements">Graphical Improvements</h2>
+        <hr />
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/703">
+            <h3>The Witcher Overhaul Project</h3>
+          </a>
+          <p>Replaces a large amount of vanilla textures with HD textures.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Sound and Texture Overhaul</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/662">
+            <h3>Realistic Moon HD</h3>
+          </a>
+          <p>
+            Replaces the moon with a higher resolution and more realistic
+            texture.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - The Witcher - Realistic Moon HD</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/813">
+            <h3>Rain Fog Remover</h3>
+          </a>
+          <p>
+            Replaces radioactive looking fog that occurs when raining with a
+            transparent texture, makes rain look normal.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Rain fog remover</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/892">
+            <h3>
+              Kaer Morhen Witcher 3 HD Retexture Remaster (with unique textures)
+            </h3>
+          </a>
+          <p>HD Retexture of Kaer Morhen.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Kaer Morhen W3 Style HD Retexture</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/999">
+            <h3>No More Radioactive Wheat - Natural Grain Texture</h3>
+          </a>
+          <p>
+            Changes the wheat texture to be less of a bright yellow/green
+            texture.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Main File</li>
+            <li>
+              Optional Files - OPTIONAL DARK SOIL TEXTURE FOR A MORE CONSISTENT
+              LOOK
+            </li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/901">
+            <h3>Improved HD Lightsources</h3>
+          </a>
+          <p>Higher res textures for light sources</p>
+          <ul class="inner-bubble">
+            <li>Main Files - HD Light Sources</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/900">
+            <h3>Distinctive Raven's Armors</h3>
+          </a>
+          <p>
+            Makes the Raven Armors more distinctive between their variants and
+            upscales their textures.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Distinctive Raven Armors No Headband</li>
+            <li>Optional Files - Alternate Order and Elven Raven Armor</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1056">
+            <h3>The Witcher Perfect Blood Upscaled and Retouched</h3>
+          </a>
+          <p>
+            This mod improves the textures of blood and tweaks the effect
+            settings.
+          </p>
+          <p>
+            <strong>Note: I've uploaded this mod to Nexus but I do not take any
+              ownership of it, I updated the config file and upscaled the
+              textures.</strong>
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Perfect Blood Upscaled And Retouched</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/897">
+            <h3>School of the wolf</h3>
+          </a>
+          <p>
+            Differentiates all witchers in the game and reworks Eskel and
+            Lambert's faces to more closely resemble their Witcher 3
+            counterparts.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - School of the Wolf</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1016">
+            <h3>Natural Shani HD Upscaled</h3>
+          </a>
+          <p>
+            Upscaled version of the original Natural Shani mod, which provides a more practical look
+            for Shani.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Natural Shani HD Upscaled</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/852">
+            <h3>Hiuuz’s Witcher 3 Shani for The Witcher</h3>
+          </a>
+          <p>Makes Shani's face look more like her Witcher 3 counterpart.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Shani_w3Face</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/847">
+            <h3>Thaler HD Retexture</h3>
+          </a>
+          <p>High quality retexture for Thaler.</p>
+          <ul class="inner-bubble">
+            <li>Thaler HD Retexture</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/849">
+            <h3>Kalkstein HD Retexture</h3>
+          </a>
+          <p>High quality retexture for Kalkstein.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Kalkstein HD Retexture</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/850">
+            <h3>Ramsmeat HD Retexture</h3>
+          </a>
+          <p>High quality retexture for Ramsmeat.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Ramsmeat HD Retexture</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1028">
+            <h3>Coleman HD Retexture</h3>
+          </a>
+          <p>High quality retexture for Coleman.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Coleman HD Retexture</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1027">
+            <h3>Guards HD Retexture</h3>
+          </a>
+          <p>High quality retexture for Guards.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Guards HD Retexture</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/872">
+            <h3>Zoltan Inspired by the Witcher 2</h3>
+          </a>
+          <p>Retextures Zoltan to look more like his Witcher 2 counterpart.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - TW2 Style Zoltan</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/878">
+            <h3>Foltest Inspired by the Witcher 2</h3>
+          </a>
+          <p>Retextures Foltest to look more like his Witcher 2 counterpart.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Foltest inspired by The Witcher 2</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/899">
+            <h3>NPC Eye Fixes and Overhaul</h3>
+          </a>
+          <p>
+            Adds realistic HD eyes of various colors for several NPCs game-wide
+            and fixes some quest & lore inconsistencies with eye color.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - TW1 NPC Eye Overhaarticle</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1036">
+            <h3>Lore Triss with Sodden Scars</h3>
+          </a>
+          <p>
+            Lore image of Triss from the book description, including blue eyes
+            and scars.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Lore Triss with Sodden Scars</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/831">
+            <h3>Triss inspired from The Witcher 2</h3>
+          </a>
+          <p>
+            Retextures Triss's outfit to look more like her Witcher 2
+            counterpart.
+          </p>
+          <ul class="inner-bubble">
+            <li>
+              Main Files - Triss TW2 outfit with original skin tone face and
+              hair
+            </li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1011">
+            <h3>Farticlel HD Blue Eyes For Triss</h3>
+          </a>
+          <p>HD Upscale of Triss Blue Eyes</p>
+          <ul class="inner-bubble">
+            <li>Main Files - HD Blue Triss Eyes</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/860">
+            <h3>Hiuuz's Witcher 3 Dandelion for The Witcher</h3>
+          </a>
+          <p>
+            Replaces Dandelion's face to look more like his Witcher 3
+            counterpart
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Dandelion_w3Face</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/860">
+            <h3>Geralt Face and Leather Jacket Retexture</h3>
+          </a>
+          <p>
+            Retextures Geralt's face and leather jacket but we'll be replacing
+            his face with a version I prefer in the next mod.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Geralt_retextured_v1p2</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/940">
+            <h3>
+              Striga Scar Alternatives and Tweaks for Hiuuz's Witcher 3 Geralt
+              Face for The Witcher
+            </h3>
+          </a>
+          <p>
+            Updated version of Hiuzz's Witcher 3 Geralt face which adds the
+            Striga scar and adds some fixes to Geralt's mods.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main File - Striga Scar and Arm Fix</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/845">
+            <h3>Reverend Beard Texture Fix</h3>
+          </a>
+          <p>
+            Fixes a seam issue with the Reverend's Beard and upscales his
+            textures.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Reverend Beard Texture Fix</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/990">
+            <h3>The Witcher HUD Compilation</h3>
+          </a>
+          <p>
+            <strong>THIS MOD IS ENTIRELY OPTIONAL.</strong> This is an
+            opinionated compilation of hud and UI mods, including assets from
+            Rise of the White Wolf, Black Edition, Inferno Edition, and the
+            author's own tweaks. So far, this has been my favorite UI mod.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Witcher HUD Compilation - Override</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/947">
+            <h3>Skip intro - straight to the Main Menu</h3>
+          </a>
+          <p>
+            This mod forces your game to skip intro videos and goes straight to
+            the main menu.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Movies</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/989">
+            <h3>Movie Upscale Project (4K)</h3>
+          </a>
+          <p>
+            All movies, cutscenes and cards are upscaled to a 4K resolution.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - 4K Game Movie Package</li>
+          </ul>
+        </article>
+      </section>
+      <section aria-labelledby="bug-fixes">
+        <h2 id="bug-fixes">Bug Fixes & Tweaks</h2>
+        <hr />
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/941">
+            <h3>Project Mersey - The Witcher Fix Pack</h3>
+          </a>
+          <p>
+            Fixes numerous bugs, implements leftover content that was cut, and
+            adds some QoL improvements, such as item stacking and increased
+            Geralt speed.
+          </p>
+          <p>
+            <strong>Note:</strong> Do not change anything about the file
+            structure during installation.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Project Mersey - The Witcher Fix Pack</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/921">
+            <h3>Morenn Storage and Romance Fix</h3>
+          </a>
+          <p>
+            Fixes an issue with Morenn's romance dialogue and adds a storage
+            inventory similar to innkeepers to her dialogue.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Morenn Storage and Romance Fix</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/665">
+            <h3>TW1 All Herbs</h3>
+          </a>
+          <p>Increases herb spawn amounts, making the game far less tedious.</p>
+          <p>
+            <strong>Note:</strong> Do not install with "Han Gives Han NOT
+            Berbercane."
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - TW1 All Herbs</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/657">
+            <h3>Missing Kalkstein and Leuvaarden Clues Fix</h3>
+          </a>
+          <p>
+            Makes the missing clues for Suspect: Kalkstein and Suspect:
+            Leuvaarden available.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Missing Kalkstein and Leuvaarden Clues Fix</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/955">
+            <h3>Leuvaarden Buys Salamander Pins</h3>
+          </a>
+          <p>
+            Allows Leuvaarden to buy your Salamandra badges. Includes a balanced
+            version and alternate version.
+          </p>
+          <ul class="inner-bubble">
+            <li>Optional Files - Alternate Version</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/964">
+            <h3>Celina and Jarticleian Fix</h3>
+          </a>
+          <p>
+            Fixes issues with a certain quest involving Celina in Chapter 4 and
+            includes added dialogue not present in the original mod.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Celina Jarticleian Fix</li>
+            <li>Optional Files - English Voice Files</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/737">
+            <h3>More Talents (Balanced)</h3>
+          </a>
+          <p>
+            Allows you to get more talents around level 38 without excessive
+            grinding or completing certain tasks.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - More Talents (Balanced)</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1084">
+            <h3>Miscellaneous Fixes</h3>
+          </a>
+          <p>
+            Includes various fixes to cutscenes, monster abilities, and other
+            tweaks.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Misc Fixes</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1092">
+            <h3>The Order and Scoia'tael Rank Rebalance</h3>
+          </a>
+          <p>
+            Rebalances and organizes level and experience values for characters
+            from the Order and Scoia'tael.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - The Order and Scoia'tael Ranks</li>
+            <li>Update Files - Scoia'tael part 2</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1083">
+            <h3>Stamina Talents Fix</h3>
+          </a>
+          <p>Fixes issues in two stamina talents.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Endurance Talents Fix</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1083">
+            <h3>Drowners are Necrophages...so are Devourers</h3>
+          </a>
+          <p>
+            Fixes an issue with drowners and drowner dead not being affected by
+            the Necrophage Oil.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Drowners are Necrophages...so are Devourers</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/1101">
+            <h3>Sword Stats Rebalance</h3>
+          </a>
+          <p>Majorly rebalances sword stats and prices.</p>
+          <p>
+            <strong>Note:</strong> This mod comes with sword fixes, thus the mod
+            "Sword Stats Fixes" from the same author is not needed.
+          </p>
+          <ul class="inner-bubble">
+            <li>Main Files - Sword Stats Rebalance</li>
+          </ul>
+        </article>
+      </section>
+      <section>
+        <h2>Additional Mods</h2>
+        <p>There are a few mods with atypical installations. One is hosted on ModDB and uses an exe, while the others
+          don't need to be put in the Override folder.</p>
+        <article class="outer-bubble">
+          <a target="_blank" class="red-link"
+            href="https://www.moddb.com/mods/scabbard-mod/downloads/scabbard-mod-v104">
+            <h3>Scabbard Mod</h3>
+          </a>
+          <p>This mod adds scabbards to Geralts swords on his back. It's a little bit buggy but overall adds a lot. This
+            mod is hosted on ModDB and is packaged in a non-conventional way. As such, I've provided more detailed
+            installation instructions here.</p>
+          <ol class="inner-bubble">
+            <li>Click the big red "Download Now" button.</li>
+            <li>This mod is packaged in an exe file, so we need to handle it differently than we would with a
+              typical loose file mod.</li>
+            <li>Create a file called "ScabbardsMod" somewhere easy to find, like downloads.
+              <img class="reshade-images" src="images/ScabbardsMod-CreateScabbardsModFolder.webp"
+                alt="PLACE IMAGE HERE">
+            </li>
+            <li>Execute the file, when it asks for your witcher game location point it to the <strong>folder you
+                just made instead</strong>.
+              <img class="reshade-images" src="images/ScabbardsMod-FileSelection.webp" alt="PLACE IMAGE HERE">
+            </li>
+            <li>Select "The Witcher EE" when it presents you with a dropdown.
+              <img class="reshade-images" src="images/ScabbardsMod-SelectComponents.webp" alt="PLACE IMAGE HERE">
+            </li>
+            <li>Finish the install and you should be presented with this in your scabbards mod folder.
+              <img class="reshade-images" src="images/ScabbardsMod-Folder.webp" alt="PLACE IMAGE HERE">
+            </li>
+            <li>Right click Data, Select send to and then "Compressed (zipped) folder".
+              <img class="reshade-images" src="images/ScabbardsMod-CompressFolder.webp" alt="PLACE IMAGE HERE">
+            </li>
+            <li>Name it "ScabbardMod".
+              <img class="reshade-images" src="images/ScabbardsMod-CompressedMod.webp" alt="PLACE IMAGE HERE">
+            </li>
+            <li>Install "ScabbardMod.zip" into MO2.</li>
+            <li>Right click DATA and select "set as <data> directory", you should be given the following:
+                <img class="reshade-images" src="images/ScabbardsMod-CompressedMod.webp" alt="PLACE IMAGE HERE">
+            </li>
+            <li>Click OK.</li>
+            <li>Once the mod is installed, it needs to be moved above the "Complete Sword Overhaul - Scabbards Patch".
+              So that the patch applies.</li>
+          </ol>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/719">
+            <h3>Complete Sword Overhaul</h3>
+          </a>
+          <p>Replaces all steel and silver swords in the game with high quality models.</p>
+          <p><strong>IMPORTANT: INSTALL THE MOD AS IS, DO NOT MODIFY DIRECTORIES.</strong> <br> ReadMe.txt should be
+            deleted. <br> The mods should be installed in the following order, with HD textures overwriting the previous
+            files.</p>
+          <ul class="inner-bubble">
+            <li>Main Files - Complte Sword Overhaul - Main File</li>
+            <li>Optional Files - CSO - Scabbard mod compatibility patch</li>
+            <li>Optional Files - CSO - HD textures</li>
+          </ul>
+        </article>
+        <article class="mod-card">
+          <a target="_blank" class="red-link" href="https://www.nexusmods.com/witcher/mods/708">
+            <h3>Dagger Overhaul</h3>
+          </a>
+          <p>Replaces all daggers in the game with high quality models.</p>
+          <p><strong>IMPORTANT: INSTALL THE MOD AS IS, DO NOT MODIFY DIRECTORIES.</strong> <br> ReadMe.txt should be
+          <ul class="inner-bubble">
+            <li>Main Files - Dagger Overhaul - Main file</li>
+            <li>Optional Files - Dagger Overhaul - HD Textures</li>
+          </ul>
+        </article>
+      </section>
+      <section>
+        <h2>Installing DXVK</h2>
+        <p>
+          DXVK is a Vulkan-based translation layer for Direct3D 8/9/10/11 3D applications. It's most commonly used
+          on linux to run games that use Direct3D API's since Linux only supports Vulkan. However, it's also useful for
+          old games using dated Direct3D versions. By default Windows handles 3D API calls by translating through each
+          layer: d3d9 > d3d10 > d3d11. DXVK will translate directly from d3d9 to Vulkan, cutting out a middle layer and
+          generally translating more efficiently.
+        </p>
+        <br>
+        <p>
+          For more complex reasons that I don't fully understand, DXVK also improves GPU performance, I suspect due to
+          improved handling of cores on
+          modern hardware. For obvious reasons, AMD, Nvidia, and Intel probably don't care much about supporting or
+          improving decade+ old API's.
+        </p>
+        <br>
+        <p>
+          DXVK also provides configuration settings that can be modified to improve the rendering pipeline and
+          fix some visual bugs.
+        </p>
+        <br>
+        <p><strong>TLDR</strong>: DXVK improves the performance and stability of the game, resulting in little to no
+          crashing.</p>
+        <hr />
+        <div class="outer-bubble">
+
+        </div>
+      </section>
+      <h2><strong>FIX THIS SECTION DORK</strong></h2>
+      <section aria-labelledby="installing-reshade">
+        <h2 id="installing-reshade">Installing Reshade</h2>
+        <hr />
+        <ol class="outer-bubble">
+          <li>
+            Download the latest
+            <a target="_blank" class="red-link" href="https://reshade.me/">Reshade</a><strong> WITH FULL ADD-ON
+              SUPPORT</strong>.
+          </li>
+          <li>Run the setup tool.</li>
+          <li>
+            Find and select Witcher.exe inside the system folder of your game.
+            Typically: <br />
+            <code>"Steam\steamapps\common\The Witcher Enhanced
+              Edition\Data\Override"</code>
+          </li>
+          <li>
+            Select <strong>Vulkan</strong> as the rendering api, since we're
+            using dxvk to convert d3d9 commands to Vulkan.
+          </li>
+          <li>
+            Checkmark the following packs
+            <ul>
+              <li>SweetFX by Ceejay.dk</li>
+              <li>Legacy effects</li>
+              <li>FXShaders by luluco250</li>
+              <li>qUINT by Marty McFly</li>
+              <li>Color effects by prod80</li>
+              <li>dh-reshade-shaders by AlucardDH</li>
+              <li>Insane-Shaders by Lord of Lunacy</li>
+              <li>AstrayFX</li>
+              <li>iMMERSE by Marty Mcfly</li>
+            </ul>
+          </li>
+          <li>
+            Click run inside of MO2, from now on only launch the game through
+            MO2. Mods will only load if the game is run through MO2
+          </li>
+          <li>
+            Once loaded into the game, hit "home" on your keyboard to open
+            reshade.
+          </li>
+          <li>
+            Click Skip Tutorial
+            <img class="reshade-images" src="images/skip-tutorial.webp" alt="" />
+          </li>
+          <li>
+            Select the dropdown at the top, scroll down until you find
+            WitcherReshade.ini, select the file and click Select
+            <img class="reshade-images" src="images/select-dropdown.webp" alt="" />
+          </li>
+          <li>
+            Select Performance mode at the bottom of the page. This will fully
+            compile and lock in settings, netting you more performance. If you
+            want to change specific settings in filters you can turn it off and
+            on at your will.
+            <img class="reshade-images" src="images/performance-mode-off.webp" alt="" />
+            <img class="reshade-images" src="images/performance-mode-on.webp" alt="" />
+          </li>
+          <li>
+            Click on the add-ons tab
+            <img class="reshade-images" src="images/add-ons-tab.webp" alt="" />
+          </li>
+          <li>
+            Enable "Copy depth buffer during frame to prevent artifacts", this
+            should also enable "Copy depth buffer before clear operations". This
+            will allow reshade to access the depth buffer and inject ambient
+            occlusion and other effects.
+            <img class="reshade-images" src="images/depth-buffer.webp" alt="" />
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h2>More From Me</h2>
+        <ul>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/@AbsoluteNovaHD">Youtube</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://next.nexusmods.com/profile/AbsoluteNova/mods">Nexus Mods</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Other Mod Projects</h2>
+        <ul>
+          <li>Work in progress</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Support Me</h2>
+        <ul>
+          <li>
+            <a target="_blank" href="https://ko-fi.com/absolutenova">Ko-fi</a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
 
 </html>
