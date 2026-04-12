@@ -1,216 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Wabbajack Installation - A More Modern Witcher</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wabbajack Installation - A More Modern Witcher</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <a href="index.html">
+            <li>A More Modern Witcher</li>
+          </a>
+          <a
+            target="_blank"
+            href="https://ko-fi.com/absolutenova"
+          >
+            <li>Donate</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <main class="bounding-box">
+      <h1>WabbaJack</h1>
+      <p>
+        Wabbajack is an automated installer for the mods and Mod Organizer 2. This install allows for minimal user
+        intervention. This will install and setup Mod Organizer 2 as well as install the majority of mods, getting you
+        90% of the way there.
+      </p>
+      <section aria-label="Prerequisites">
+        <h2>Prerequisites</h2>
+        <p>
+          While not all of these are necessarily required, I highly recommend that you install Visual C++ Runtime
+          Libraries and update your graphics drivers, especially if you haven't in a while or haven't ever.
+          <strong>A Nexus Mods account is a hard requirement.</strong>
+        </p>
+        <hr />
+        <div class="outer-bubble">
+          <article>
+            <h3>A Good Archiving Tool</h3>
+            <p>This is a tool for extracting and manipulating .zip, .rar, .7z and other compressed files.</p>
+            <ul class="inner-bubble">
+              <li>
+                I recommend
+                <a
+                  target="_blank"
+                  class="red-link"
+                  href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US"
+                  >NanaZip</a
+                >
+                for <strong>Windows 11</strong> users.
+              </li>
+              <li>
+                I recommend
+                <a
+                  target="_blank"
+                  class="red-link"
+                  href="https://www.7-zip.org/"
+                  >7-Zip</a
+                >
+                for
+                <strong>Windows 10</strong>
+                users.
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>
+              <a
+                target="_blank"
+                class="red-link"
+                href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/"
+                >Visual C++ Runtime Libraries</a
+              >
+            </h3>
+            <p>
+              This is a compilation of old and new C++ runtime libraries. Installing these libraries fixes some issues
+              with running the game on modern systems. A lot of older games need these as well, so it doesn't hurt to
+              have them installed.
+            </p>
+            <ol class="inner-bubble">
+              <li>Download the file from Techpowerup.</li>
+              <li>Extract the archive using your archiving tool of choice.</li>
+              <li>Open the folder.</li>
+              <li>Right click install_all.bat and run as administrator.</li>
+              <li>Work your way through each install prompt until finished.</li>
+            </ol>
+          </article>
+          <article>
+            <h3>Graphics Drivers</h3>
+            <p>Ensure that your graphics drivers are up to date.</p>
+            <ul class="inner-bubble">
+              <li>
+                Nvidia Graphics Drivers can be downloaded through the
+                <a
+                  id="nvidia-link"
+                  target="_blank"
+                  href="https://www.nvidia.com/en-eu/software/nvidia-app/"
+                  >NVIDIA App</a
+                >.
+              </li>
+              <li>
+                AMD Graphics Drivers can be downloaded through
+                <a
+                  id="amd-link"
+                  target="_blank"
+                  href="https://www.amd.com/en/products/software/adrenalin.html"
+                  >AMD Adrenalin</a
+                >.
+              </li>
+              <li>
+                Intel Arc Graphics Drivers can be downloaded through
+                <a
+                  id="intel-link"
+                  target="_blank"
+                  href="https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html"
+                  >Intel Arc</a
+                >.
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>
+              <a
+                target="_blank"
+                class="red-link"
+                href="https://www.nexusmods.com/"
+                >Nexus Mods Account</a
+              >
+            </h3>
+            <div class="inner-bubble">
+              <p>
+                <strong>This is a hard requirement</strong> for installing mods from Nexus. If you do not already have a
+                nexus mods account, you will need one. You can create an account
+                <a
+                  target="_blank"
+                  class="red-link"
+                  href="https://users.nexusmods.com/"
+                  >here</a
+                >.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section aria-label="Wabbajack Installation">
+        <h2>Wabbajack</h2>
+        <p>Explain Wabbajack in more detail.</p>
+        <hr />
+        <article class="outer-bubble">
+          <h3>Wabbajack Installation</h3>
+          <ol class="inner-bubble">
+            <li>
+              Download the Latest
+              <a
+                class="red-link"
+                href="https://www.wabbajack.org/"
+                >Wabbajack</a
+              >
+            </li>
+            <li>
+              Download my
+              <a
+                target="_blank"
+                class="red-link"
+                href="https://github.com/AbsoluteNova/A-More-Modern-Witcher/releases/tag/v1.0.0"
+                >Wabbajack file</a
+              >
+              by clicking "A.More.Modern.Witcher.wabbajack"
+            </li>
+            <li>
+              Create a new folder anywhere outside of any default Windows folders, and the game folder itself. I
+              recommend making a Modding folder in your root directory and a Wabbajack folder inside of it.
+            </li>
+            <p><code>"C:\Modding\Wabbajack"</code></p>
+            <li>Place the downloaded "Wabbajack.exe" and "A.More.Modern.Witcher.wabbajack" in this folder</li>
+            <li>Run "Wabbajack.exe"</li>
+            <li>Select Install From Disk</li>
+            <li>
+              Where it says "Target Modlist", click the three dots, then locate and select
+              "A.More.Modern.Witcher.wabbajack" inside our "Modding\Wabbajack" folder
+            </li>
+            <li>Create a new folder inside "Modding", call it "A More Modern Witcher"</li>
+            <p><code>"C:\Modding\A More Modern Witcher"</code></p>
+            <li>Where it says "Modlist Installation Location", click the three dots and select the folder:</li>
+            <p><code>"C:\Modding\A More Modern Witcher"</code></p>
+            <li>Create a new folder inside "Modding" called "Downloads"</li>
+            <p><code>"C:\Modding\Downloads"</code></p>
+            <li>Where it says "Resource Download Location", click the three dots, and select the folder:</li>
+            <p><code>"C:\Modding\Downloads"</code></p>
+            <li>
+              Wabbajack should look similar to this:
+              <img
+                class="reshade-images"
+                src="images/wabbajack-install.webp"
+                alt=""
+              />
+            </li>
 
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <a href="index.html">
-                        <li>A More Modern Witcher</li>
-                    </a>
-                    <a target="_blank" href="https://ko-fi.com/absolutenova">
-                        <li>Donate</li>
-                    </a>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1>WabbaJack</h1>
-            <p>Wabbajack is an automated installer for the mods and MO2. This install allows for minimal user
-                intervention, basically, you don't have to do as much work.</p>
-            <section>
-                <h2>Prerequisites</h2>
-                <div>
-                    <h3>A Good Archiving Tool</h3>
-                    <p>This is a tool for extracting and manipulating .zip, .rar, .7z and other compressed files.</p>
-                    <ul>
-                        <li>I recommend <a target="_blank" class="red-link" href="#">7-Zip</a> for <strong>Windows
-                                10</strong>
-                            users.</li>
-                        <li>I recommend <a target="_blank" class="red-link" href="#">NanaZip</a> for <strong>Windows
-                                11</strong> users.
-                        </li>
-                    </ul>
-                    <h3><a target="_blank" class="red-link" href="#">VC++ Runtime Libraries</a></h3>
-                    <p>This is a compilation of old and new runtime libraries. Using this seems to fix some issues
-                        with running the game on modern systems. A lot of other older games need these as well
-                        so it doesn’t hurt to have them installed either.</p>
-                    <ol>
-                        <li>Download the file from Techpowerup</li>
-                        <li>Extract the folder using one of the the previously mentioned archiving tools.</li>
-                        <li>Open the folder</li>
-                        <li>Right click install_all.bat and run as administrator</li>
-                    </ol>
-                    <h3>Graphics Drivers</h3>
-                    <p>Ensure that your graphics drivers are up to date.</p>
-                    <ul>
-                        <li>Nvidia Graphics Drivers can be downloaded through GeForce Experience</li>
-                        <li>AMD Graphics Drivers can be downloaded through AMD Adrenalin</li>
-                        <li>Intel Graphics Drivers can be downloaded through Intel Arc</li>
-                    </ul>
-                    <h3><a target="_blank" class="red-link" href="#">Nexus Mods Account</a></h3>
-                    <p>If you do not already have a nexus mods account, you will need one. You can create an account
-                        <a target="_blank" class="red-link" href="#">here</a>.
-                    </p>
-                </div>
-            </section>
-        </main>
-        <section aria-label="Wabbajack Installation" class="guide-section">
-            <h1>Wabbajack</h1>
-            <p>Wabbajack is an automated installer for the mods and MO2. This install allows for minimal user
-                intervention, basically, you don't have to do as much work.</p>
-            <h2>Installation</h2>
-            <hr>
-            <ol class="outer-bubble">
-                <li>Download the Latest <a class="red-link" href="https://www.wabbajack.org/">Wabbajack</a></li>
-                <li>Download my <a target="_blank" class="red-link"
-                        href="https://github.com/AbsoluteNova/A-More-Modern-Witcher/releases/tag/v1.0.0">Wabbajack
-                        file</a> by clicking "A.More.Modern.Witcher.wabbajack"</li>
-                <li>Create a new folder anywhere outside of any default Windows folders, and the game folder itself. I
-                    recommend making a Modding folder in your root directory and a Wabbajack folder inside of it.
-                </li>
-                <p><code>"C:\Modding\Wabbajack"</code></p>
-                <li>Place the downloaded "Wabbajack.exe" and "A.More.Modern.Witcher.wabbajack" in this folder</li>
-                <li>Run "Wabbajack.exe"</li>
-                <li>Select Install From Disk</li>
-                <li>Where it says "Target Modlist", click the three dots, then locate and select
-                    "A.More.Modern.Witcher.wabbajack" inside our "Modding\Wabbajack" folder</li>
-                <li>Create a new folder inside "Modding", call it "A More Modern Witcher"
-                </li>
-                <p><code>"C:\Modding\A More Modern Witcher"</code></p>
-                <li>Where it says "Modlist Installation Location", click the three dots and select the folder:
-                </li>
-                <p><code>"C:\Modding\A More Modern Witcher"</code></p>
-                <li>Create a new folder inside "Modding" called "Downloads"
-                </li>
-                <p><code>"C:\Modding\Downloads"</code></p>
-                <li>Where it says "Resource Download Location", click the three dots, and select the folder:</li>
-                <p><code>"C:\Modding\Downloads"</code></p>
-                <li>Wabbajack should look similar to this:</li>
-                <img class="reshade-images" src="images/wabbajack-install.webp" alt="">
-                <li>Begin the installation by clicking the green arrow.</li>
-                <li>Accept the Nexus Mods API request</li>
-                <li>If you are not a Premium user you will need to manually click download for each mod.</li>
-                <li>Once complete, the installation will show a green Installation Complete screen, you are safe to
-                    close Wabbajack.</li>
-                <img class="reshade-images" src="images/wabbajack-complete.webp" alt="">
-                <li>
-                    If you see a red Installation Failed screen, try logging in through Wabbajack's settings, then
-                    reinstall the list to the same folder.
-                </li>
-            </ol>
-        </section>
-        <section aria-label="Running The Game" class="guide-section">
-            <h2>Running The Game</h2>
-            <p>This mod guide uses the MO2 mod manager to streamline the installation process for installing mods and to
-                make your life easier for launching the game and disabling anything you don't want.</p>
-        </section>
-        <section aria-label="Post Install Steps" class="guide-section">
-            <h2>Post-Install Steps</h2>
-            <h3>Installing Reshade</h3>
-            <hr>
-            <ol class="outer-bubble">
-                <li>Download the latest <a target="_blank" class="red-link"
-                        href="https://reshade.me/">Reshade</a><strong> WITH FULL
-                        ADD-ON
-                        SUPPORT</strong></li>
-                <li>Run the setup tool</li>
-                <li>Find and select Witcher.exe inside the system folder of your game. Typically: <br>
-                    <code>"Steam\steamapps\common\The Witcher Enhanced Edition\Data\Override"</code>
-                </li>
-                <li>Select <strong>Vulkan</strong> as the rendering api, since we're using dxvk to convert d3d9 commands
-                    to vulkan</li>
-                <li>Checkmark the following packs</li>
-                <ul>
-                    <li>SweetFX by Ceejay.dk</li>
-                    <li>Legacy effects</li>
-                    <li>FXShaders by luluco250</li>
-                    <li>qUINT by Marty McFly</li>
-                    <li>Color effects by prod80</li>
-                    <li>dh-reshade-shaders by AlucardDH</li>
-                    <li>Insane-Shaders by Lord of Lunacy</li>
-                    <li>AstrayFX</li>
-                    <li>iMMERSE by Marty Mcfly</li>
-                </ul>
-                <li>Click run inside of MO2, from now on only launch the game through MO2. Mods will only load through
-                    MO2</li>
-                <li>Once loaded into the game, hit "home" on your keyboard to open reshade.</li>
-                <li>Click Skip Tutorial</li>
-                <img class="reshade-images" src="images/skip-tutorial.webp" alt="">
-                <li>Select the dropdown at the top, scroll down until you find WitcherReshade.ini, select the file and
-                    click Select</li>
-                <img class="reshade-images" src="images/select-dropdown.webp" alt="">
-                <li>Select Performance mode at the bottom of the page. This will fully compile and lock in settings,
-                    netting you more performance. If you want to change specific settings in filters you can turn it off
-                    and on at your will.
-                </li>
-                <img class="reshade-images" src="images/performance-mode-off.webp" alt="">
-                <img class="reshade-images" src="images/performance-mode-on.webp" alt="">
-                <li>Click on the add-ons tab</li>
-                <img class="reshade-images" src="images/add-ons-tab.webp" alt="">
-                <li>Enable "Copy depth buffer during frame to prevent artifacts", this should also enable "Copy depth
-                    buffer before clear operations". This will allow reshade to access the depth buffer and inject
-                    ambient occlusion and other effects.
-                </li>
-                <img class="reshade-images" src="images/depth-buffer.webp" alt="">
-                <li>That's it! Your game should now be modded and playable as intended. You can continue to add some
-                    more overhaul mods that couldn't be included in Wabbajack or continue playing!</li>
-            </ol>
-            <h2>Additional Mods - Manual Installation</h2>
-            <p>There are some mods I couldn't include in the WabbaJack installation due to them being hosted on Moddb,
-                so to get the full experience you'll have to install these manually yourself. Fortunately I've left a
-                guide here to do so. </p>
-            <hr>
-            <ol class="outer-bubble">
-                <a target="_blank" class="red-link"
-                    href="https://www.moddb.com/mods/scabbard-mod/downloads/scabbard-mod-v104">
-                    <h3>Scabbard Mod</h3>
-                </a>
-                <li>Click the big red "Download Now" button</li>
-                <li>This mod is packaged in an exe file, so we need to handle it differently than we would with a
-                    typical loose file mod.</li>
-                <li>Create a file called "scabbards mod" somewhere easy to find, like your desktop.</li>
-                <li>Execute the file, when it asks for your witcher game location point it to the <strong>folder you
-                        just made instead</strong>.</li>
-                <li>Select "The Witcher EE" when it presents you with a dropdown.</li>
-                <li>Finish the download and you should be presented with this in your scabbards mod folder</li>
-                <img src="images/" alt="">
-                <li>Right click Data, Select send to and then "Compressed (zipped) folder"</li>
-                <li>Name it "Scabbards mod"</li>
-                <li>Install "Scabbards mod.zip" into MO2</li>
-                <li>Right click DATA and select "set as <data> directory", you should be given the following.</li>
-                <li>Click OK</li>
-            </ol>
-        </section>
-        <footer>
-            <section>
-                <h2>More From Me</h2>
-                <ul>
-                    <li><a target="_blank" href="https://www.youtube.com/@AbsoluteNovaHD">Youtube</a>
-                    </li>
-                    <li><a target="_blank" href="https://next.nexusmods.com/profile/AbsoluteNova/mods">Nexus Mods</a>
-                    </li>
-            </section>
-            <section>
-                <h2>Other Mod Projects</h2>
-                <ul>
-                    <li>Work in progress</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Support Me</h2>
-                <ul>
-                    <li><a target="_blank" href="https://ko-fi.com/absolutenova">Ko-fi</a></li>
-                </ul>
-            </section>
-        </footer>
-    </body>
+            <li>Begin the installation by clicking the green arrow.</li>
+            <li>Accept the Nexus Mods API request</li>
+            <li>If you are not a Premium user you will need to manually click download for each mod.</li>
+            <li>
+              Once complete, the installation will show a green Installation Complete screen, you are safe to close
+              Wabbajack.
+              <img
+                class="reshade-images"
+                src="images/wabbajack-complete.webp"
+                alt=""
+              />
+            </li>
 
+            <li>
+              If you see a red Installation Failed screen, try logging in through Wabbajack's settings, then reinstall
+              the list to the same folder.
+            </li>
+          </ol>
+        </article>
+      </section>
+      <section aria-label="Running The Game">
+        <h2>Running The Game</h2>
+        <p>
+          This mod guide uses the MO2 mod manager to streamline the installation process for installing mods and to make
+          your life easier for launching the game and disabling anything you don't want.
+        </p>
+        <hr />
+        <article class="outer-bubble"></article>
+      </section>
+      <section aria-label="Post Install Steps">
+        <h2>Additional Mods - Manual Installation</h2>
+        <p>
+          There are some mods I couldn't include in the WabbaJack installation due to them being hosted on Moddb, so to
+          get the full experience you'll have to install these manually yourself. Fortunately I've left a guide here to
+          do so.
+        </p>
+        <hr />
+        <article class="outer-bubble">
+          <a
+            target="_blank"
+            class="red-link"
+            href="https://www.moddb.com/mods/scabbard-mod/downloads/scabbard-mod-v104"
+          >
+            <h3>Scabbard Mod</h3>
+          </a>
+          <p>
+            This mod adds scabbards to Geralts swords on his back. It's a little bit buggy but overall adds a lot. This
+            mod is hosted on ModDB and is packaged in a non-conventional way. As such, I've provided more detailed
+            installation instructions here.
+          </p>
+          <ol class="inner-bubble">
+            <li>Click the big red "Download Now" button.</li>
+            <li>
+              This mod is packaged in an exe file, so we need to handle it differently than we would with a typical
+              loose file mod.
+            </li>
+            <li>
+              Create a file called "ScabbardsMod" somewhere easy to find, like downloads.
+              <img
+                class="reshade-images"
+                src="images/ScabbardsMod-CreateScabbardsModFolder.webp"
+                alt="PLACE IMAGE HERE"
+              />
+            </li>
+            <li>
+              Execute the file, when it asks for your witcher game location point it to the
+              <strong>folder you just made instead</strong>.
+              <img
+                class="reshade-images"
+                src="images/ScabbardsMod-FileSelection.webp"
+                alt="PLACE IMAGE HERE"
+              />
+            </li>
+            <li>
+              Select "The Witcher EE" when it presents you with a dropdown.
+              <img
+                class="reshade-images"
+                src="images/ScabbardsMod-SelectComponents.webp"
+                alt="PLACE IMAGE HERE"
+              />
+            </li>
+            <li>
+              Finish the install and you should be presented with this in your scabbards mod folder.
+              <img
+                class="reshade-images"
+                src="images/ScabbardsMod-Folder.webp"
+                alt="PLACE IMAGE HERE"
+              />
+            </li>
+            <li>
+              Right click Data, Select send to and then "Compressed (zipped) folder".
+              <img
+                class="reshade-images"
+                src="images/ScabbardsMod-CompressFolder.webp"
+                alt="PLACE IMAGE HERE"
+              />
+            </li>
+            <li>
+              Name it "ScabbardMod".
+              <img
+                class="reshade-images"
+                src="images/ScabbardsMod-CompressedMod.webp"
+                alt="PLACE IMAGE HERE"
+              />
+            </li>
+            <li>Install "ScabbardMod.zip" into MO2.</li>
+            <li>
+              Right click DATA and select "set as &lt;data&gt; directory", you should be given the following:
+              <img
+                class="reshade-images"
+                src="images/ScabbardsMod-CompressedMod.webp"
+                alt="PLACE IMAGE HERE"
+              />
+            </li>
+            <li>Click OK.</li>
+            <li>
+              Once the mod is installed, it needs to be moved above the "Complete Sword Overhaul - Scabbards Patch". So
+              that the patch applies.
+            </li>
+          </ol>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h2>More From Me</h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@AbsoluteNovaHD"
+              >Youtube</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://next.nexusmods.com/profile/AbsoluteNova/mods"
+              >Nexus Mods</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Other Mod Projects</h2>
+        <ul>
+          <li>Work in progress</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Support Me</h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://ko-fi.com/absolutenova"
+              >Ko-fi</a
+            >
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
 </html>
